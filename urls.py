@@ -1,0 +1,17 @@
+from django.contrib import admin
+from django.urls import path
+from home import views 
+
+urlpatterns = [
+    
+    path('admin/', admin.site.urls),
+    path("", views.index, name='home'),
+    path("home", views.index, name='home'),
+    path('about', views.about, name='about'),
+    #path('services', views.services, name='services'),
+    path('contact', views.contact, name='contact'),
+    path('skills',views.skills, name='skills'),
+    path('project',views.project, name='project'),
+
+    
+]
